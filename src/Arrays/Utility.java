@@ -1,6 +1,7 @@
 package Arrays;
 
 import java.util.List;
+import java.util.Random;
 
 public class Utility {
 	
@@ -51,5 +52,19 @@ public class Utility {
 		}
 		System.out.println();
 	}
+	
+	// returns a uniformly distributed integer between 0 and bound
+	public int genRandom(int bound) {
+		return new Random().nextInt(bound);
+	}
+	
+	public double genRandom(double bound) {
+		return new Random().nextDouble() * (bound);
+	}
+	
+	public double genRandom() {
+		return new Random().nextDouble();
+	}
+
 
 }
