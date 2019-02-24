@@ -6,6 +6,8 @@ public class ArrayList {
 
 	public static void main(String[] args) {
 		
+		Utility utility = new Utility();
+		
 		List<String> list = new java.util.ArrayList<>();
 		
 		list.add("Kate");
@@ -18,9 +20,7 @@ public class ArrayList {
 		System.out.println(list.size());
 		System.out.println(list.isEmpty());
 		
-		for (String s : list) {
-			System.out.println(s);
-		}
+		utility.printList("Names", list);
 
 	}
 

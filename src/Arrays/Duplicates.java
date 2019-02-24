@@ -5,12 +5,14 @@ import java.util.Arrays;
 public class Duplicates {
 
 	public static void main(String[] args) {
+		
+		Utility utility = new Utility();
 
 		int[] input = new int[10];
 		for (int i = 0; i < input.length; i++) {
 			input[i] = i;
 		}
-		print("input", input);
+		utility.printIntArray("input", input);
 		
 		System.out.println(containsDupes(input));
 		System.out.println(dupes(input));
@@ -19,7 +21,7 @@ public class Duplicates {
 			input[i] = i;
 		}
 		input[4] = 5;
-		print("input", input);
+		utility.printIntArray("input", input);
 		
 		System.out.println(containsDupes(input));
 		System.out.println(dupes(input));
@@ -48,14 +50,6 @@ public class Duplicates {
 		}
 		
 		return false;
-	}
-	
-	public static void print(String title, int[] array) {
-		System.out.println(title);
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
-		}
-		System.out.println();
 	}
 
 }
