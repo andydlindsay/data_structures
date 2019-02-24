@@ -12,7 +12,7 @@ public class Duplicates {
 		for (int i = 0; i < input.length; i++) {
 			input[i] = i;
 		}
-		utility.printIntArray("input", input);
+		utility.printIntArray(input);
 		
 		System.out.println(containsDupes(input));
 		System.out.println(dupes(input));
