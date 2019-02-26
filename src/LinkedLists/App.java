@@ -31,6 +31,7 @@ public class App {
 
 		list.insertNodeAtIndex(new Node(11), 17);
 		list.printList();
+		list.getNodeAtIndex(2);
 		
 	}
 

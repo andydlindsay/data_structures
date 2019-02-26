@@ -25,6 +25,19 @@ public class LinkedList {
 		return counter;
 	}
 	
+	public Node getNodeAtIndex(int index) {
+		int counter = 0;
+		Node currentNode = this.head;
+		while (currentNode != null) {
+			if (counter == index) {
+				return currentNode;
+			}
+			currentNode = currentNode.nextNode;
+			counter++;
+		}
+		return this.head;
+	}
+	
 	public void printList() {
 		if (this.getLength() == 0) {
 			System.out.println("linked list is empty");
