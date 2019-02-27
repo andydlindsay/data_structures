@@ -16,7 +16,6 @@ public class LinkedList {
 		}
 		
 		Node currentNode = this.head;
-		
 		while (currentNode != null) {
 			counter += 1;
 			currentNode = currentNode.nextNode;
