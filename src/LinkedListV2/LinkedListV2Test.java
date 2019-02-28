@@ -27,4 +27,42 @@ public class LinkedListV2Test {
 		assertEquals(node1.getNextNode().getData(), "Lamb");
 	}
 	
+	@Test
+	void canInsertNodeIntoList() {
+		LinkedList<String> list = new LinkedList<String>();
+		list.insert("Mary");
+		assertEquals(list.size(), 1);
+	}
+	
+	@Test
+	void canRemoveNodeInList() {
+		LinkedList<String> list = new LinkedList<String>();
+		list.insert("Mary");
+		list.insert("Lamb");
+		assertEquals(list.size(), 2);
+		list.remove("Mary");
+		assertEquals(list.size(), 1);
+	}
+	
+	@Test
+	void willNotRemoveNodeIfNotFound() {
+		LinkedList<String> list = new LinkedList<String>();
+		list.insert("Mary");
+		list.insert("Lamb");
+		assertEquals(list.size(), 2);
+		list.remove("Barry");
+		assertEquals(list.size(), 2);
+	}
+	
+	@Test
+	void canTraverseTheList() {
+		LinkedList<String> list = new LinkedList<String>();
+		list.insert("Mary");
+		list.insert("Lamb");
+		list.insert("Bari");
+		list.insert("Teri");
+		assertEquals(list.size(), 4);
+		list.traverseList();
+	}
+	
 }
