@@ -1,10 +1,18 @@
 package stacks;
 
-public class Stack<T extends Comparable <T>> {
+public class Stack<T extends Comparable <T>> implements IStack<T> {
 
 	private Node<T> root;
 	private int sizeOfList;
 	
+	// private methods
+	private void insertDataAtBeginning(T data) {
+		Node<T> newNode = new Node<>(data);
+		newNode.setNextNode(this.root);
+		this.root = newNode;
+	}
+	
+	// public methods
 	public void push(T data) {
 		this.sizeOfList++;
 		if (this.root == null) {
@@ -13,15 +21,8 @@ public class Stack<T extends Comparable <T>> {
 			insertDataAtBeginning(data);
 		}
 	}
-
-	// O(1)
-	private void insertDataAtBeginning(T data) {
-		Node<T> newNode = new Node<>(data);
-		newNode.setNextNode(this.root);
-		this.root = newNode;
-	}
 	
-	public void traverseList() {
+	public void traverseStack() {
 		if (this.root == null) return;
 		Node<T> currentNode = this.root;
 		while (currentNode != null) {
@@ -45,6 +46,10 @@ public class Stack<T extends Comparable <T>> {
 
 	public int size() {
 		return this.sizeOfList;
+	}
+	
+	public boolean isEmpty() {
+		return this.root == null;
 	}
 	
 }

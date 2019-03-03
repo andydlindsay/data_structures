@@ -32,5 +32,13 @@ class StackTest {
 		assertEquals(poppedNode.getData(), "Teri");
 		assertEquals(stack.size(), 2);
 	}
+	
+	@Test
+	void canTestForEmptyStack() {
+		Stack<String> stack = new Stack<String>();
+		assertEquals(stack.isEmpty(), true);
+		stack.push("Mary");
+		assertEquals(stack.isEmpty(), false);
+	}
 
 }
