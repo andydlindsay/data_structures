@@ -23,6 +23,7 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	}
 	
 	// O(N)
+	@SuppressWarnings("unused")
 	private void insertDataAtEnd(T data, Node<T> node) {
 		if (node.getNextNode() != null) {
 			insertDataAtEnd(data, node.getNextNode());
