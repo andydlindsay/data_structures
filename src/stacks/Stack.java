@@ -5,7 +5,7 @@ public class Stack<T extends Comparable <T>> {
 	private Node<T> root;
 	private int sizeOfList;
 	
-	public void unshift(T data) {
+	public void push(T data) {
 		this.sizeOfList++;
 		if (this.root == null) {
 			this.root = new Node<>(data);
@@ -31,11 +31,16 @@ public class Stack<T extends Comparable <T>> {
 		System.out.println();
 	}
 	
-	public Node<T> shift() {
+	public Node<T> pop() {
 		if (this.root == null) return null;
+		this.sizeOfList--;
 		Node<T> shiftedNode = this.root;
 		this.root = this.root.getNextNode();
 		return shiftedNode;
+	}
+	
+	public Node<T> peek() {
+		return this.root;
 	}
 
 	public int size() {

@@ -1,8 +1,8 @@
 package stacks;
 
 public class Node<T extends Comparable<T>> {
-	public T data;
-	public Node<T> nextNode;
+	private T data;
+	private Node<T> nextNode;
 	
 	Node(T data) {
 		this.data = data;
